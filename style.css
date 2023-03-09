@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #222831;
+    --border: #393E46;
+    --color: #00ADB5;
+    --color2: #EEEEEE;
+}
+
+body{
+    background: var(--background);
+    color: var(--color);
+    font-family: 'Finger Paint' , cursive;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.container #title-head{
+    font-size: 60px;
+}
+
+.container #title-head::selection{
+    color: #58f7ff;
+}
+
+.container #restartBtn{
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: var(--color);
+    color: rgb(7, 7, 96);
+    cursor: pointer;
+    border: none;
+    box-shadow: #060d40 2px 2px 2px 2px;
+    transition: .3s transform;
+    font-weight: 600;
+}
+
+.container #restartBtn:hover{
+    opacity: 0.9;
+    transform: translate(-3px , -3px);
+}
+
+
+.game{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.game .box{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color); 
+    border: 3px solid var(--border);
+    border-top: none;
+    border-left: none;
+    font-size: 120px;
+}
+
+.game .box:nth-child(3n){
+    border-right: none;
+}
+
+.game .box:nth-child(6) ~ .box{
+    border-bottom: none;
+}
+
+
+.game .box::selection,
+.container #restartBtn::selection{
+    color: #58f7ff;
+}
+
